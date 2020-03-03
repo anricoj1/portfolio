@@ -1,0 +1,46 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.homeImg {
+    background-image: url('../images/water.jpg');
+
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.homeDiv {
+    color: white;
+}
+
+
+.titleMain {
+    text-align: center;
+    vertical-align: middle;
+    justify-content: space-around;
+    letter-spacing: 20px;
+    padding-top: 300px;
+}
+
+/* spacing */
+
+.extraSpace {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+@media screen and (max-width: 991px) {
+    .extraSpace {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
