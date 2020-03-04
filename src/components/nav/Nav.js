@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import './styles/page.css';
-import './styles/nav.css';
+
+import '../page.css';
+import './Nav.css';
+
 
 
 class Nav extends Component {

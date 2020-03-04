@@ -10,7 +10,7 @@ body, html {
 }
 
 .homeImg {
-    background-image: url('../images/water.jpg');
+    background-image: url('./images/water.jpg');
 
     height: 100%;
     background-position: center;

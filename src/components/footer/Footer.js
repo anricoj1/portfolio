@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 
-import './styles/page.css';
-import './styles/footer.css';
+import '../page.css';
+import './Footer.css';
 
-import github from './images/icons/github.png';
-import linkedin from './images/icons/linkedIn.png';
+import github from '../images/icons/github.png';
+import linkedin from '../images/icons/linkedIn.png';
+
+
 
 
 class Footer extends Component {
