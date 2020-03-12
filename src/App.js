@@ -8,10 +8,16 @@ import './components/page.css';
 class App extends Component {
     render() {
         return (
-            <div>
-                <Nav />
-                <Home />
-                <Footer />
+            <div className="App">
+                <div className="navbar fixed-top navbar-expand-lg toggle-height" id="global-nav">
+                    <Nav />
+                </div>
+                <div className="homeImg">
+                    <Home />
+                </div>
+                <div className="footer container-fluid">
+                    <Footer />
+                </div>
             </div>
         )
     }

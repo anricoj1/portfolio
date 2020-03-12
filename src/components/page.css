@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body, html {
+body, html, #root, .App {
     height: 100%;
     margin: 0;
 }
@@ -38,6 +38,21 @@ body, html {
     padding-bottom: 100px;
 }
 
+
+/* footer */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #242424;
+    color: white;
+}
+
+
+/* media queires */
 @media screen and (max-width: 991px) {
     .extraSpace {
         padding-top: 60px;

@@ -24,27 +24,25 @@ class Nav extends Component {
 
     render() {
         return (
-            <nav className="navbar fixed-top navbar-expand-lg toggle-height" id="global-nav">
-                <div className="container">
-                    <a className="navbar-brand scrollD" href="/">Jason Anrico</a>
-                    <ul className="nav-links">
-                        <li>
-                            <a className="scrollD" href="/">Home</a>
-                        </li>
-                        <li>
-                            <a className="scrollD" href="/">About</a>
-                        </li>
-                        <li>
-                            <a className="scrollD" href="/">Projects</a>
-                        </li>
-                    </ul>
-                    <div className="toggler" onClick={this.toggleNav}>
-                        <div className="line1"></div>
-                        <div className="line2"></div>
-                        <div className="line3"></div>
-                    </div>
+            <div className="container">
+                <a className="navbar-brand scrollD" href="/">Jason Anrico</a>
+                <ul className="nav-links">
+                    <li>
+                        <a className="scrollD" href="/">Home</a>
+                    </li>
+                    <li>
+                        <a className="scrollD" href="/">About</a>
+                    </li>
+                    <li>
+                        <a className="scrollD" href="/">Projects</a>
+                    </li>
+                </ul>
+                <div className="toggler" onClick={this.toggleNav}>
+                    <div className="line1"></div>
+                    <div className="line2"></div>
+                    <div className="line3"></div>
                 </div>
-            </nav>
+            </div>
         )
     }
 }
