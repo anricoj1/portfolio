@@ -9,6 +9,10 @@ body, html, #root, .App {
     margin: 0;
 }
 
+span {
+    color: white;
+}
+
 .homeImg {
     background-image: url('./images/water.jpg');
 
@@ -29,6 +33,22 @@ body, html, #root, .App {
     justify-content: space-around;
     letter-spacing: 20px;
     padding-top: 300px;
+}
+
+.logosUl {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.logosLi {
+    justify-content: center;
+    vertical-align: middle;
+    display: inline-grid;
+}
+
+.padd20 {
+    padding-top: 20px;
 }
 
 /* spacing */

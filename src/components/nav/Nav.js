@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import '../page.css';
+import '../App.css';
 import './Nav.css';
 
 
