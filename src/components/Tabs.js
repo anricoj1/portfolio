@@ -7,7 +7,10 @@ class Tabs extends Component {
     constructor(props) {
         super(props);
         this.data = props.data;
+        
     }
+
+
 
     render() {
         return (
