@@ -7,18 +7,16 @@ class Tabs extends Component {
     constructor(props) {
         super(props);
         this.data = props.data;
-        
     }
 
-
-
     render() {
+        const { toggleDiv } = this.props;
         return (
-            <div className="padd20 container">
+            <div className="padd50 container">
                 <ul className="logosUl">
                     {this.data.map((data, i) => (
                         <li key={i} className="logosLi">
-                            <span className={data.icon} onClick={() => { console.log(data.getName())}}></span>
+                            <span className={data.icon} onClick={() => { toggleDiv && console.log(data.getName())}}></span>
                         </li>   
                     ))}
                 </ul>

@@ -32,7 +32,7 @@ span {
     vertical-align: middle;
     justify-content: space-around;
     letter-spacing: 20px;
-    padding-top: 300px;
+    padding-top: 500px;
 }
 
 .logosUl {
@@ -47,8 +47,8 @@ span {
     display: inline-grid;
 }
 
-.padd20 {
-    padding-top: 20px;
+.padd50 {
+    padding-top: 50px;
 }
 
 /* spacing */
@@ -62,8 +62,6 @@ span {
 /* footer */
 
 .footer {
-    position: fixed;
-    bottom: 0;
     left: 0;
     width: 100%;
     text-align: center;
