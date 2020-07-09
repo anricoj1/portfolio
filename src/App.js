@@ -7,20 +7,21 @@ import RenderProp from './components/RenderProp';
 import Footer from './components/footer/Footer';
 
 /* classes */
-import allLogos from './components/data/Logo';
+import allAPIs from './components/data/API';
 
 /* css */
 import './components/App.css';
 
+
 /* logos */
-const logos = new allLogos().getAll();
+const logos = new allAPIs().getAll();
 
 class App extends Component {
     constructor() {
         super();
         this.state = { 
             default : false,
-            data : logos
+            component : null
         }
     }
 
@@ -28,6 +29,9 @@ class App extends Component {
         return this.setState({ default : !this.state.default });
     }
 
+    switchComponent(data) {
+        return this.setState({ component : data })
+    }
 
     render() {
         return (
@@ -37,10 +41,10 @@ class App extends Component {
                 </div>
                 <div className="homeImg">
                     <BackgroundComponent />
-                    <Tabs toggleDiv={() => {this.renderProp()}} data={logos} />
+                    <Tabs toggleDiv={() => {this.renderProp()}} toggleComponent={(comp) => this.switchComponent(comp)}  data={logos} />
                 </div>
                 <div className="container-fluid">
-                    {this.state.default ? <RenderProp /> : null}
+                    {this.state.default ? <RenderProp render={this.state.component}/> : null}
                 </div>
                 <div className="footer container-fluid">
                     <Footer />

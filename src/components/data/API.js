@@ -1,9 +1,17 @@
+/* import react to use components in constructor */
 import React from 'react';
 
+/* GitHub */
 import GitHub from './classes/GitHub';
 import GitHubComponent from './component/github/GitHubComponent';
 
-class Logo {
+/* Twitter */
+import TwitterComponent from './component/twitter/TwitterComponent';
+
+/* LinkedIn */
+import LinkedInComponent from './component/linkedin/LinkedInComponent';
+
+class API {
     constructor(name, data, icon, component) {
         this.name = name;
         this.data = data;
@@ -28,14 +36,15 @@ class Logo {
     }
 }
 
-class allLogos extends Logo {
+class allAPIs extends API {
+
     getAll() {
         const logos = [
-            new Logo('Github', new GitHub().getUser(), "fa fa-github fa-lg", <GitHubComponent />),
-            new Logo('LinkedIn', 0, "fa fa-linkedin fa-lg"),
-            new Logo('Twitter', 0, "fa fa-twitter fa-lg")
+            new API('Github', new GitHub().getUser(), "fa fa-github fa-lg", <GitHubComponent />),
+            new API('LinkedIn', 0, "fa fa-linkedin fa-lg", <LinkedInComponent />),
+            new API('Twitter', 0, "fa fa-twitter fa-lg", <TwitterComponent />)
         ];
         return logos;
     }
 }
-export default allLogos;
+export default allAPIs;

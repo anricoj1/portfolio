@@ -11,12 +11,13 @@ class Tabs extends Component {
 
     render() {
         const { toggleDiv } = this.props;
+        const { toggleComponent } = this.props;
         return (
             <div className="padd50 container">
                 <ul className="logosUl">
                     {this.data.map((data, i) => (
                         <li key={i} className="logosLi">
-                            <span className={data.icon} onClick={() => { toggleDiv && console.log(data.getName())}}></span>
+                            <span className={data.icon} onClick={() => { toggleDiv(); toggleComponent(data.getComponent()); }}></span>
                         </li>   
                     ))}
                 </ul>
