@@ -2,7 +2,6 @@
 import React from 'react';
 
 /* GitHub */
-import GitHub from './classes/GitHub';
 import GitHubComponent from './component/github/GitHubComponent';
 
 /* Twitter */
@@ -12,9 +11,8 @@ import TwitterComponent from './component/twitter/TwitterComponent';
 import LinkedInComponent from './component/linkedin/LinkedInComponent';
 
 class API {
-    constructor(name, data, icon, component) {
+    constructor(name, icon, component) {
         this.name = name;
-        this.data = data;
         this.icon = icon;
         this.component = component;
     }
@@ -36,15 +34,14 @@ class API {
     }
 }
 
-class allAPIs extends API {
+class APIs extends API {
 
     getAll() {
-        const logos = [
-            new API('Github', new GitHub().getUser(), "fa fa-github fa-lg", <GitHubComponent />),
-            new API('LinkedIn', 0, "fa fa-linkedin fa-lg", <LinkedInComponent />),
-            new API('Twitter', 0, "fa fa-twitter fa-lg", <TwitterComponent />)
+        return [
+            new API('Github', "fa fa-github fa-lg", <GitHubComponent />),
+            new API('LinkedIn', "fa fa-linkedin fa-lg", <LinkedInComponent />),
+            new API('Twitter', "fa fa-twitter fa-lg", <TwitterComponent />)
         ];
-        return logos;
     }
 }
-export default allAPIs;
+export default APIs;

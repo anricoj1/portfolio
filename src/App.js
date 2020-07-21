@@ -1,57 +1,43 @@
-/* react and components */
-import React, { Component } from 'react';
+/* react */
+import React, { useState } from 'react';
+
+/* components */
 import Nav from './components/nav/Nav';
 import BackgroundComponent from './components/BackgroundComponent';
 import Tabs from './components/Tabs';
-import RenderProp from './components/RenderProp';
 import Footer from './components/footer/Footer';
 
 /* classes */
-import allAPIs from './components/data/API';
+import APIs from './apis/API';
 
 /* css */
 import './components/App.css';
 
 
 /* logos */
-const logos = new allAPIs().getAll();
+const logos = new APIs().getAll();
 
-class App extends Component {
-    constructor() {
-        super();
-        this.state = { 
-            default : false,
-            component : null
-        }
-    }
+const App = () => {
+    const [toggle, setToggle] = useState(false);
+    const [component, setComponent] = useState(null);
 
-    renderProp() {
-        return this.setState({ default : !this.state.default });
-    }
-
-    switchComponent(data) {
-        return this.setState({ component : data })
-    }
-
-    render() {
-        return (
-            <div className="App">
-                <div className="navbar fixed-top navbar-expand-lg toggle-height" id="global-nav">
-                    <Nav />
-                </div>
-                <div className="homeImg">
-                    <BackgroundComponent />
-                    <Tabs toggleDiv={() => {this.renderProp()}} toggleComponent={(comp) => this.switchComponent(comp)}  data={logos} />
-                </div>
-                <div className="container-fluid">
-                    {this.state.default ? <RenderProp render={this.state.component}/> : null}
-                </div>
-                <div className="footer container-fluid">
-                    <Footer />
-                </div>
+    return (
+        <div className="App">
+            <div className="navbar fixed-top navbar-expand-lg toggle=-height" id="global-nav">
+                <Nav />
             </div>
-        )
-    }
+            <div className="homeImg">
+                <BackgroundComponent />
+                <Tabs toggleDiv={() => setToggle(!toggle)} setComponent={(e) => setComponent(e)} icons={logos} />
+            </div>
+            <div className="container-fluid darkDiv">
+                {toggle ? component : null}
+            </div>
+            <div className="footer container-fluid">
+                <Footer />
+            </div>
+        </div>
+    )
 }
 
 export default App;

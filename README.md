@@ -14,14 +14,8 @@ I did it this way because I prefer to build from the group up, rather than use a
 </ul>
 
 # Recent Changes
-<ul>
-    <li>Unfixed Footer from Bottom</li>
-    <li>Usage of RenderProps onClick</li>
-    <ul>
-        <li></li>
-    </ul>
-</ul>
+Usage of Function Components opposed to using Class Components. Usingn UseState instead of setting states in contructors.
+Easier to read, more modern methods of arrow functions.
 
-# Working On
-Just lifted everything up..pulled function out of props for togglingDiv. Do the same for switching the data
-thinking switch case and then setting the state of this.state({ data : <Component />})
+
+
