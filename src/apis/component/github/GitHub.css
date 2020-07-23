@@ -1,3 +1,4 @@
+/* spacing */
 .GitHub {
     margin: 0px;
     padding: 0px;
@@ -5,9 +6,9 @@
     width: 100%;
 
     background-color: #24292E;
-    color : white;
 }
 
+/* profile */
 .profileContainer {
     position: absolute;
     left: 0px;
@@ -19,6 +20,45 @@
     width: 25%;
 }
 
+.name {
+    color : #9DA5B4;
+}
+
+.username {
+    color: #666666;
+}
+
+.bio {
+    color : #9DA5B4;
+}
+
+.follows {
+    color : #D6D8DA;
+}
+
+
+.company {
+    color : #9DA5B4;
+}
+
+.blog {
+    color : #D6D8DA;
+}
+
+/* middleDiv */
+.middleDiv {
+    height: 100%;
+    width: 75%;
+
+    right: 0px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+      
+    color: white;
+}
+
+/* padding */
 .padd30 {
     padding-top: 30px;
     text-align: center;

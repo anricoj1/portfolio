@@ -25,15 +25,31 @@ const GitHubComponent = () => {
             <div className="container profileContainer">
                 <img className="circleImg padd30" src={profile.avatar_url} alt=""></img>
                 <div className="padd30">
-                    <b>
-                        <h2>{profile.name}</h2>
-                        <h4><small>{profile.login}</small></h4><br />
-                        <h5>{profile.bio}</h5>
-                        <h5>
-                            <span className="fa fa-users fa-sm">{profile.followers} follower(s) | {profile.following} following</span>
-                        </h5>
-                    </b>
+                    <h2 className="name">
+                        {profile.name}
+                    </h2>
+                    <h3 className="username">
+                        {profile.login}
+                    </h3>
+                    <br />
+                    <h4 className="bio">
+                        {profile.bio}
+                    </h4>
+                    <h5 className="follows">
+                        <span className="fa fa-users fa-sm"></span>
+                        {profile.followers} { profile.followers === 1 ? 'follower' : 'followers'} | {profile.following}
+                    </h5>
+                    <hr />
+                    <h6 className="company">
+                        {profile.company}
+                    </h6>
+                    <h6 className="blog">
+                        {profile.blog}
+                    </h6>
                 </div>
+            </div>
+            <div className="container-fluid middleDiv">
+                Hello
             </div>
         </div>
     )

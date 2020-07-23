@@ -82,3 +82,9 @@ span {
         padding-bottom: 60px;
     }
 }
+
+@media screen and (min-height: 700px) and (max-height: 990px) {
+    .titleMain {
+        padding-top : 300px;
+    }
+}
