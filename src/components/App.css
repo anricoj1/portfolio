@@ -50,12 +50,6 @@ span {
     display: inline-grid;
 }
 
-/* bottom homeDiv */
-.darkDiv {
-    background-color: rgba(0, 0, 0, 0.68);
-    color : white;
-}
-
 /* padding sizes */
 .padd50 {
     padding-top: 50px;
@@ -77,6 +71,7 @@ span {
     text-align: center;
     background-color: #242424;
     color: white;
+    bottom: 0px;
 }
 
 

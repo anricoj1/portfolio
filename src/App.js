@@ -30,10 +30,8 @@ const App = () => {
                 <BackgroundComponent />
                 <Tabs toggleDiv={() => setToggle(!toggle)} setComponent={(e) => setComponent(e)} icons={logos} />
             </div>
-            <div className="container-fluid darkDiv">
-                {toggle ? component : null}
-            </div>
-            <div className="footer container-fluid">
+            {toggle ? component : null}
+            <div className="container-fluid footer">
                 <Footer />
             </div>
         </div>

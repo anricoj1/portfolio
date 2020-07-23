@@ -14,11 +14,8 @@ const Nav = () => {
         nav.classList.toggle('active-nav');
 
         links.forEach((link, i) => {
-            if (link.style.animation) {
-                link.style.animation = '';
-            } else {
-                link.style.animation = `linkFade 0.5s ease forwards ${i / 7 + 1}s`;
-            }
+            if (link.style.animation) return link.style.animation = '';
+            link.style.animation = `linkFade 0.5s ease forwards ${i / 7 + 1}s`;
         });
     }
 
