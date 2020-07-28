@@ -1,55 +1,64 @@
 /* react */
 import React, { useState, useEffect } from 'react';
 
+/* components */
+import ProfileDiv from './components/ProfileDiv';
+import UL from './components/UL';
+import Pin from './components/Pin';
+
 /* css */
 import './GitHub.css';
 
+
 const GitHubComponent = () => {
     const [profile, setProfile] = useState([]);
+    const [repos, setRepos] = useState([]);
+    const [pins, setPins] = useState([]);
 
     useEffect(() => {
         getProfile();
-    }, []);
+        getRepos();
+
+    },[]);
 
     const getProfile = async () => {
         const response = await fetch('https://api.github.com/users/anricoj1');
         const data = await response.json();
-        
         console.log(data);
 
         setProfile(data);
     }
 
+    const getRepos = async () => {
+        const response = await fetch('https://api.github.com/users/anricoj1/repos');
+        const data = await response.json();
+
+        console.log(data);
+
+        setRepos(data);
+        setPins([
+            data[25], data[21], 
+            data[15], data[12],
+            data[0], data[2]
+        ]);
+    }
+
     return (
         <div className="container-fluid GitHub">
-            <div className="container profileContainer">
-                <img className="circleImg padd30" src={profile.avatar_url} alt=""></img>
-                <div className="padd30">
-                    <h2 className="name">
-                        {profile.name}
-                    </h2>
-                    <h3 className="username">
-                        {profile.login}
-                    </h3>
-                    <br />
-                    <h4 className="bio">
-                        {profile.bio}
-                    </h4>
-                    <h5 className="follows">
-                        <span className="fa fa-users fa-sm"></span>
-                        {profile.followers} { profile.followers === 1 ? 'follower' : 'followers'} | {profile.following}
-                    </h5>
-                    <hr />
-                    <h6 className="company">
-                        {profile.company}
-                    </h6>
-                    <h6 className="blog">
-                        {profile.blog}
-                    </h6>
-                </div>
-            </div>
+            <ProfileDiv profile={profile} />
             <div className="container-fluid middleDiv">
-                Hello
+                <div className="padd30"><UL /><hr /></div>
+                <div className="popularRepos">
+                    <h6>Popular repositories</h6>
+                    <div className="pins">
+                        {}
+                        {pins.map((pin, i) => (
+                            <div className="pin" key={pin.id}>
+                                <Pin pin={pin} />
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
         </div>
     )
