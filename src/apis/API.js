@@ -21,10 +21,6 @@ class API {
         return this.name;
     }
 
-    getData() {
-        return this.data;
-    }
-
     getIcon() {
         return this.icon;
     }

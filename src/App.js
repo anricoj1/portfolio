@@ -23,7 +23,7 @@ const App = () => {
 
     return (
         <div className="App">
-            <div className="navbar fixed-top navbar-expand-lg toggle=-height" id="global-nav">
+            <div className="navbar fixed-top navbar-expand-lg toggle-height" id="global-nav">
                 <Nav />
             </div>
             <div className="homeImg">
