@@ -16,7 +16,6 @@ const GitHubComponent = () => {
     const [profile, setProfile] = useState([]);
     const [component, setComponent] = useState(<Overview />);
 
-
     useEffect(() => {
         setData();
     },[]);
@@ -30,7 +29,7 @@ const GitHubComponent = () => {
             <ProfileDiv profile={profile} />
             <div className="container-fluid middleDiv">
                 <div className="padd30">
-                    <FlexBox setComponent={(e) => setComponent(e)} links={github.setFlexBox()} />
+                    <FlexBox setComponent={(e) => setComponent(e)} links={github.setFlexBox()} publicRepos={profile.public_repos} />
                     {component}
                 </div>
             </div>

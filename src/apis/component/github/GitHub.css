@@ -90,7 +90,7 @@
 }
 
 .flexBox ul:hover li:not(:hover) {
-    opacity: 0.2;
+    opacity: 1;
 }
 
 .flexBox ul li::after {
@@ -107,6 +107,36 @@
 
 .flexBox ul li:hover::after, ul li.active::after {
     transform: scaleX(1);
+}
+
+.activeLi {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid orange;
+}
+
+.Counter {
+    display: inline-block;
+    min-width: 20px;
+    padding: 0px 6px 0px 6px;
+    margin: 0px 6px 0px 6px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 2em;
+    background: rgb(24, 26, 31);
+
+    display: inline-grid;
+}
+
+.spanMargin {
+    margin : 0px 6px 0px 6px;
+}
+
+.inlineSpan {
+    display: inline;
 }
 
 /* card */
