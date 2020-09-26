@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 
 /* components */
-import Pin from './Pin';
+import Repo from './Repo';
 
 /* css */
 import '../GitHub.css';
@@ -24,9 +24,9 @@ const Overview = () => {
         <div className="overview">
             <h6>Popular repositories</h6>
             <div className="pins">
-                {starred.map((star) => (
-                    <div className="pin" key={star.id}>
-                        <Pin star={star} />
+                {starred.map((repo) => (
+                    <div className="pin" key={repo.id}>
+                        <Repo className="pin" repo={repo} />
                     </div>
                 ))}
             </div>

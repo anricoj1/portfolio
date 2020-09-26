@@ -5,7 +5,7 @@ import React from 'react';
 import Overview from './components/Overview';
 
 /* repositories component */
-import Repositories from './components/Repositories';
+import Repositories from './components/repositories/Repositories';
 
 /* error component if nothing to display send err through props */
 import Error from './components/Error';
@@ -23,6 +23,13 @@ class GitHub {
         const stars = await response.json();
 
         return await stars;
+    }
+
+    getRepos = async () => {
+        const response = await fetch('https://api.github.com/users/anricoj1/repos');
+        const repos = await response.json();
+
+        return await repos;
     }
 
     setFlexBox = () => {
