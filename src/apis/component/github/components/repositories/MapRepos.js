@@ -10,7 +10,7 @@ import './Repositories.css';
 
 const MapRepos = ({ repos, filter }) => {
     return (
-        <div className="results">
+        <div id="results" className="results">
             {filter}
             {repos.map(repo => (
                 <div key={repo.id} className="repo">

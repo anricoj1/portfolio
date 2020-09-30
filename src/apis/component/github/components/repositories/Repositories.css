@@ -3,16 +3,20 @@
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow: scroll;
 }
 
 .results {
     height: 75%;
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
+.results::-webkit-scrollbar {
+    display: none;
+}
 
 /* search-box */
 .search-box {
