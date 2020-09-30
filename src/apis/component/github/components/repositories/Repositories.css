@@ -12,13 +12,15 @@
 
 /* search-box */
 .search-box {
-    display: flexbox;
+    padding-bottom: 2vh;
+    display: flex;
+    border-bottom: 2px solid black;
 }
 
-input[type=text] {
-    width: 200px;
-    padding: 12px 20px 12px 5px;
-    margin: 0px 20px 0px 0px;
+.search {
+    width: 50%;
+    padding: 5px 12px;
+    margin: 5px 12px;
 
     box-sizing: border-box;
     box-shadow: inset 0 1px 0 rgba(225,228,232,.2);
@@ -30,26 +32,75 @@ input[type=text] {
     background-color: rgb(27, 29, 35);
     background-position: 10px 10px; 
     background-repeat: no-repeat;
-
-    transition: width 0.4s ease-in-out;
-}
-  
-input[type=text]:focus {
-    width: 50%;
 }
 
-/* repo className */
-.pin {
+/* filter menu */
+.summary {
+    margin: 10px
+}
+
+.select-menu {
+    position: absolute;
+    z-index: 100;
+    width: 250px;
+}
+
+.menu-header {
+    padding: 7px;
+    background-color: #24292E;
+}
+
+.menu-item {
+    padding: 7px;
+    background-color: #31363F;
+}
+
+
+table {
+    border: 1px solid black;
+    border-radius: 20px;
+    border-collapse: inherit;
+}
+
+th, td {
+    height: 45px;
+}
+
+th {
+    border-bottom: 1px solid black;
+}
+
+th:first-of-type {
+    border-top-left-radius: 20px;
+}
+
+th:last-of-type {
+    border-top-right-radius: 20px;
+}
+
+tr:last-of-type td:last-of-type {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+td:hover {
+    background-color: #666e7a;
+}
+
+/* repo */
+.repo {
     height: 40%;
-    width: 45%;
+    width: 50%;
     margin: 10px;
     padding: 16px;
+
+    border-bottom: 2px solid black;
 
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    
-    background: #31363F;
+
+    background-color: #24292E;    
     color: #9DA5B4;
 }
 

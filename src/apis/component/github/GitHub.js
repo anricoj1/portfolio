@@ -5,7 +5,7 @@ import React from 'react';
 import Overview from './components/Overview';
 
 /* repositories component */
-import Repositories from './components/repositories/Repositories';
+import Repositories from './components/Repositories';
 
 /* error component if nothing to display send err through props */
 import Error from './components/Error';

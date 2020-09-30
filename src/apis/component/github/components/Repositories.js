@@ -2,14 +2,14 @@
 import React, { useState, useEffect } from 'react';
 
 /* components */
-import SearchBox from './SearchBox';
-import SearchResults from './SearchResults';
+import SearchBox from './repositories/SearchBox';
+import SearchResults from './repositories/SearchResults';
 
 /* css */
-import './Repositories.css';
+import './repositories/Repositories.css';
 
 /* github */
-import GitHub from '../../GitHub';
+import GitHub from '../GitHub';
 
 const Repositories = () => {
     const [repos, setRepos] = useState([]);
@@ -28,7 +28,7 @@ const Repositories = () => {
     return (
         <div className="repositories">
             <div className="container-fluid">
-                <SearchBox search={search} setSearch={(e) => setSearch(e)} setSelection={(e) => setSelection(e) } />
+                <SearchBox search={search} selection={selection} setSearch={(e) => setSearch(e)} setSelection={(e) => setSelection(e) } />
             </div>
             <div className="results">
                 <SearchResults search={search} selection={selection} repos={repos} />
