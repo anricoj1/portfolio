@@ -14,7 +14,7 @@ const SearchBox = ({ search, selection, setSearch, setSelection }) => {
             <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Find a repository..." className="search" />
             <div className="d-flex">
                 <details>
-                    <summary className="btn btn-dark summary" aria-haspopup="menu" role="button">
+                    <summary className="btn btn-success summary" aria-haspopup="menu" role="button">
                         <b>Language: </b>
                         <span data-menu-button> {selection}</span>
                         <span className="dropdown-caret"></span>

@@ -30,9 +30,7 @@ const Repositories = () => {
             <div className="container-fluid">
                 <SearchBox search={search} selection={selection} setSearch={(e) => setSearch(e)} setSelection={(e) => setSelection(e) } />
             </div>
-            <div className="results">
-                <SearchResults search={search} selection={selection} repos={repos} />
-            </div>
+            <SearchResults search={search} selection={selection} repos={repos} />
         </div>
     )
 }
