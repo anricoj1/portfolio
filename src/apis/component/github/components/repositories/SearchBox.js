@@ -1,40 +1,36 @@
 /* react */
 import React from 'react';
 
+/* components */
+import SelectMenu from './SelectMenu';
+
 /* css */
 import './Repositories.css';
 
 
-const SearchBox = ({ search, selection, setSearch, setSelection }) => {
+const SearchBox = ({ filters, len, setSearch, setSelection }) => {
 
-    const options = ['All', 'JavaScript', 'CSS', 'HTML', 'Java', 'Python', 'Dart', 'Swift'];
-
+    const FilterText = () => {
+        if ((filters.search) && (filters.selection !== 'All')) {
+            return <p>{len} results for repositories matching {filters.search} written in {filters.selection}</p>
+        } else if (filters.search) {
+            return <p>{len} results for repositories matching {filters.search}</p>
+        } else if (filters.selection !== 'All') {
+            return <p>{len} results for repositories written in {filters.selection}</p>
+        } else {
+            return null;
+        }
+    }
+    
     return (
-        <div className="search-box">
-            <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Find a repository..." className="search" />
-            <div className="d-flex">
-                <details>
-                    <summary className="btn btn-success summary" aria-haspopup="menu" role="button">
-                        <b>Language: </b>
-                        <span data-menu-button> {selection}</span>
-                        <span className="dropdown-caret"></span>
-                    </summary>
-                    <details-menu role="menu">
-                        <table className="select-menu">
-                            <tbody>
-                                <tr className="menu-header">
-                                    <th>Select language</th>
-                                </tr>
-                                {options.map(option => (
-                                    <tr className="menu-item" key={option}>
-                                        <td onClick={() => setSelection(option)}><b>{option}</b></td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </details-menu>
-                </details>
+        <div className="search-div">
+            <div className="search-box">
+                <input type="text" value={filters.search} onChange={e => setSearch(e.target.value)} placeholder="Find a repository..." className="search" />
+                <div className="d-flex">
+                    <SelectMenu filters={filters} setSelection={e => setSelection(e)} />
+                </div>
             </div>
+            <FilterText />
         </div>
     )
 }
