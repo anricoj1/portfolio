@@ -2,23 +2,20 @@
 import React, { useState, useEffect } from 'react';
 
 /* components */
-import SearchBox from './repositories/SearchBox';
-import SearchResults from './repositories/SearchResults';
+import SearchResults from './SearchResults';
+import SearchBox from './search-box/SearchBox';
 
 /* css */
-import './repositories/Repositories.css';
+import './Repositories.css';
 
 /* github */
-import GitHub from '../GitHub';
+import GitHub from '../../GitHub';
 
 const Repositories = () => {
     /* useState hooks */
     const [repos, setRepos] = useState([]);
     const [search, setSearch] = useState('');
     const [selection, setSelection] = useState('All');
-
-    /* init results */
-    var results = [];
 
     /* useEffect to fetch repos (async) */
     useEffect(() => {
@@ -33,9 +30,9 @@ const Repositories = () => {
     return (
         <div className="repositories">
             <div className="container-fluid">
-                <SearchBox filters={{"search" : search, "selection" : selection }} len={results.length} setSearch={e => setSearch(e)} setSelection={e => setSelection(e)} />
+                <SearchBox filters={{"search" : search, "selection" : selection }} setSearch={e => setSearch(e)} setSelection={e => setSelection(e)} />
             </div>
-            <SearchResults search={search} selection={selection} repos={repos} results={results} />
+            <SearchResults search={search} selection={selection} repos={repos} />
         </div>
     )
 }

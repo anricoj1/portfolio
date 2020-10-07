@@ -2,7 +2,7 @@
 import React from 'react';
 
 /* css */
-import '../GitHub.css';
+import './GitHub.css';
 
 const FlexBox = ({ links, setComponent, publicRepos }) => {
 

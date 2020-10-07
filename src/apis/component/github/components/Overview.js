@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 import Repo from './Repo';
 
 /* css */
-import '../GitHub.css';
+import './GitHub.css';
 
 import GitHub from '../GitHub';
 

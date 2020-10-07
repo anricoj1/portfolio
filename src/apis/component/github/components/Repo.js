@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 /* css */
-import '../GitHub.css';
+import './GitHub.css';
 
 
 const Repo = ({ repo }) => {

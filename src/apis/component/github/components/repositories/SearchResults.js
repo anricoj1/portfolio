@@ -3,11 +3,13 @@ import React from 'react';
 
 /* components */
 import MapRepos from './MapRepos';
+import FilterText from './search-box/FilterText';
 
 /* css */
 import './Repositories.css';
 
-const SearchResults = ({ search, selection, repos,  results }) => {
+const SearchResults = ({ search, selection, repos }) => {
+    var results = [];
 
     repos.forEach(repo => {
         var name = repo.name.toLowerCase();
@@ -23,7 +25,14 @@ const SearchResults = ({ search, selection, repos,  results }) => {
         }
     });
 
-    return <MapRepos repos={results} />;
+    return (
+        <div className="repos">
+            <div className="filter">
+                <FilterText search={search} selection={selection} len={results.length} />
+            </div>
+            <MapRepos repos={results} />
+        </div>
+    )
 }
 
 export default SearchResults;

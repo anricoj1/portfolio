@@ -2,7 +2,7 @@
 import React from 'react';
 
 /* css */
-import './Repositories.css';
+import './Search.css';
 
 
 const SelectMenu = ({ filters, setSelection }) => {
@@ -17,18 +17,15 @@ const SelectMenu = ({ filters, setSelection }) => {
                 <span className="dropdown-caret"></span>
             </summary>
             <details-menu role="menu">
-                <table className="select-menu">
-                    <tbody>
-                        <tr className="menu-header">
-                            <th>Select language</th>
-                        </tr>
-                        {options.map(option => (
-                        <tr className="menu-item" key={option}>
-                            <td onClick={() => setSelection(option)}><b>{option}</b></td>
-                        </tr>
-                        ))}
-                    </tbody>
-                </table>
+                <div className="select-menu">
+                    <header className="menu-header">Select language</header>
+                    {options.map(option => (
+                        <div key={option} className="menu-item" onClick={() => setSelection(option)}>
+                            {option === filters.selection ? <span className="fa fa-check check"></span> : null}
+                            <label className="option">{option}</label>
+                        </div>
+                    ))}
+                </div>
             </details-menu>
         </details>
     )

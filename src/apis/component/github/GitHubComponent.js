@@ -6,11 +6,14 @@ import ProfileDiv from './components/ProfileDiv';
 import FlexBox from './components/FlexBox';
 import Overview from './components/Overview';
 
+/* css */
+import './components/GitHub.css';
+
 /* methods */
 import GitHub from './GitHub';
 const github = new GitHub();
 
-/* css */
+
 
 const GitHubComponent = () => {
     const [profile, setProfile] = useState([]);
