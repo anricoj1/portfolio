@@ -64,6 +64,10 @@
     color: #9DA5B4;
 }
 
+.overview {
+    height: 100%;
+}
+
 /* flexbox */
 
 .underlineUl {
@@ -204,4 +208,61 @@
     position: relative;
     top: 10%;
     transform: translateY(-50%);
+}
+
+
+/* media 1029px medium */
+@media screen and (max-width : 1029px) {
+    .GitHub {
+        height: 120%;
+    }
+
+    .profileContainer {
+        position: top;
+        left: 0px;
+        height: 30%;
+    
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+
+    .circleImg {
+        height: 150px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+    .middleDiv {
+        height: 100%;
+        padding: 250px 0px 0px 0px;
+        left: 0px;
+    }
+
+    .pins {
+        height: 80%;
+        display: flex;
+        overflow-y: scroll;
+        scrollbar-width: none;
+    }
+
+    .pins::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .pin {
+        height: 20%;
+        width: 100%;
+        margin: 10px;
+        padding: 16px;
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        
+        background: #31363F;
+        color: #9DA5B4;
+    }
 }
