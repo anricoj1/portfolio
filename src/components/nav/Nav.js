@@ -19,8 +19,22 @@ const Nav = () => {
         });
     }
 
+    const handleScroll = () => {
+        window.onscroll = () => {
+            const nav = document.getElementById('global-nav');
+
+            if (window.scrollY > 1) {
+                if (window.innerWidth < 991) {
+                    return nav.classList.remove('scrolled-nav');
+                }
+                return nav.classList.add('scrolled-nav');
+            }
+            return nav.classList.remove('scrolled-nav');
+        }
+    }
+
     return (
-        <div className="container">
+        <div className="container" onScroll={handleScroll()}>
             <a className="navbar-brand scrollD" href="/">Jason Anrico</a>
             <ul className="nav-links">
                 <li>
