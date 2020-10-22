@@ -214,6 +214,7 @@
 /* media 1029px medium */
 @media screen and (max-width : 1029px) {
     .GitHub {
+        width: 100%;
         height: 120%;
     }
 
@@ -228,11 +229,13 @@
         width: 100%;
     }
 
+    
     .circleImg {
         height: 150px;
         position: relative;
         overflow: hidden;
         border-radius: 50%;
+        padding: 20px;
     }
 
     .middleDiv {

@@ -14,8 +14,5 @@ I did it this way because I prefer to build from the group up, rather than use a
 </ul>
 
 # Recent Changes
-Usage of Function Components opposed to using Class Components. Usingn UseState instead of setting states in contructors.
-Easier to read, more modern methods of arrow functions.
-
-
+center .titleMain to fit screen, onscroll change navbar background
 

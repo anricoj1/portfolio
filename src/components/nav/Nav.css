@@ -37,6 +37,12 @@ body .scrollD, body .scrollD:hover {
     margin: 5px;
 }
 
+.scrolled-nav {
+    background-color: #242424;
+    height: 60px !important;
+    line-height: 60px;
+}
+
 
 /* nav media queries */
 
@@ -110,6 +116,22 @@ body .scrollD, body .scrollD:hover {
 
     .toggler {
         display: block;
+    }
+}
+
+@media screen and (min-height: 1081px) and (max-height: 2560px) {
+    .navbar-brand {
+        font-size: 25px;
+        letter-spacing: 10px;
+    }
+
+    .nav-links {
+        width: 60%;
+    }
+
+    .nav-links a {
+        font-size: 20px;
+        letter-spacing: 6px;
     }
 }
 
