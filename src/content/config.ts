@@ -1,3 +1,4 @@
+// blog collection config
 import { defineCollection, z } from 'astro:content';
 
 const blog = defineCollection({
