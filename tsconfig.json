@@ -22,5 +22,12 @@
     "noEmit": true,
     "noUncheckedIndexedAccess": true,
   },
-  "include": ["prettier.config.cjs", ".eslintrc.cjs", "public", "src"],
+  "include": [
+    "prettier.config.cjs",
+    ".eslintrc.cjs",
+    "tailwind.config.js",
+    "postcss.config.cjs",
+    "public",
+    "src",
+  ],
 }
